@@ -39,6 +39,44 @@ body {
    
 }
 
+/* wrapper around your SVG and number */
+.cart {
+  position: relative;
+  width: 68px;              /* match your SVG width */
+  height: 68px;             /* match your SVG height */
+  display: inline-block;
+}
+
+/* make the SVG fill the wrapper */
+.cart svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* center the number over the SVG */
+.cart-count {
+  position: absolute;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;          /* tweak as you like */
+  pointer-events: none;     /* keep link clickable */
+  z-index: 2;               /* ensure above the SVG */
+}
+.product-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+
+
+
 /* Product Grid */
 .product-grid {
     display:flex;
